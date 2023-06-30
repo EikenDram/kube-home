@@ -1,0 +1,86 @@
+{
+  "name": "K3S.LOCAL",
+  "contacts": [
+    {
+      "title": "Administrator",
+      "name": "Aiken Drum",
+      "phone": "77-77",
+      "mail": "eikendram@gmail.com"
+    }
+  ],
+  "specs": [
+    { "name": "IP", "value": "192.168.120.15" },
+    { "name": "CPU", "value": "4 Cores" },
+    { "name": "Memory", "value": "5 Gb" },
+    { "name": "Fedora CoreOS", "value": "37.20230205.3.0" },
+    { "name": "K3S", "value": "v1.27.2+k3s1" }
+  ],
+  "services": [
+    {
+      "name": "KubeR",
+      "desc": "Report processing service",
+      "url": "http://report.k3s.local/"
+    },
+    {
+      "name": "Rabbit MQ",
+      "desc": "Report processing service",
+      "url": "http://rabbitmq.k3s.local/"
+    },
+    {
+      "name": "Gitea",
+      "desc": "Git server",
+      "url": "http://git.k3s.local/"
+    },
+    {
+      "name": "IBM DB2",
+      "desc": "Database server port: 50000"
+    }
+  ],
+  "system": [
+    {
+      "name": "Portainer",
+      "desc": "Kubernetes management",
+      "url": "http://portainer.k3s.local/"
+    },
+    {
+      "name": "Grafana",
+      "desc": "Monitoring UI",
+      "url": "http://grafana.k3s.local/"
+    },
+    {
+      "name": "Argo CD",
+      "desc": "Continuous delivery software",
+      "url": "http://argocd.k3s.local/"
+    },
+    {
+      "name": "Tekton",
+      "desc": "CI/CD Pipelines",
+      "url": "http://tekton.k3s.local/"
+    },
+    {
+      "name": "MinIO",
+      "desc": "Backup storage",
+      "url": "http://k3s.local:9001/"
+    },
+    {
+      "name": "Prometheus",
+      "desc": "Monitoring aggregator",
+      "url": "http://prometheus.k3s.local/"
+    },
+    {
+      "name": "Registry",
+      "desc": "Private docker registry",
+      "url": "http://k3s.local:5000/"
+    },
+    {
+      "name": "Verdaccio",
+      "desc": "Private npm server",
+      "url": "http://npm.k3s.local/"
+    },
+    {
+      "name": "Nuget",
+      "desc": "Private nuget server",
+      "url": "http://nuget.k3s.local/"
+    }
+  ]
+}

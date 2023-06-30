@@ -1,13 +1,14 @@
 # build stage
-FROM node:lts-alpine as build-stage
+FROM k3s.local:5000/library/node:lts-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN yarn
 COPY . .
-RUN npm run build
+RUN yarn build
 
 # production stage
-FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/dist /usr/share/nginx/html
+FROM k3s.local:5000/library/nginx:stable-alpine as production-stage
+COPY  --from=build-stage /app/dist /usr/share/nginx/html
+#COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
