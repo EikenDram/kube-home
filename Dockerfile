@@ -2,6 +2,8 @@
 FROM k3s.local:5000/library/node:lts-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
+RUN npm config set registry http://gitea.gitea-http:3000/api/packages/gitea_admin/npm/
+RUN npm config set -- '//gitea.gitea-http:3000/api/packages/gitea_admin/npm/:_authToken' "a6deb579cbdf60d9fa6d01b3128b375465f05dca"
 RUN yarn
 COPY . .
 RUN yarn build
