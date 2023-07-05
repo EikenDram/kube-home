@@ -2,19 +2,13 @@
 
 Home page for kubernetes cluster
 
-# Push to cluster
+## Push to cluster
 
 Add cluster's gitea as another remote with name `gitea` and run
 
 ```
 git push gitea
 ```
-
-# 2D:
-
-Alright, maybe i dont want to rebuild entire app for small changes in text content, so maybe i wanna store some .json on disk and read content from there?
-
-# essentials
 
 ## Project setup
 
@@ -71,5 +65,3 @@ pnpm lint
 ### Customize configuration
 
 See [Configuration Reference](https://vitejs.dev/config/).
-
-## Dockerfile
