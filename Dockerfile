@@ -4,8 +4,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN yarn config set registry http://gitea-http.gitea:3000/api/packages/gitea_admin/npm/
 RUN yarn config set -- '//gitea-http.gitea:3000/api/packages/gitea_admin/npm/:_authToken' "a6deb579cbdf60d9fa6d01b3128b375465f05dca"
+RUN rm yarn.lock
 COPY . .
-RUN sed -i -e "s#https://registry.npmjs.org/#gitea-http.gitea:3000/api/packages/gitea_admin/npm/#g" yarn.lock
 RUN yarn
 RUN yarn build
 
