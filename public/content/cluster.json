@@ -33,7 +33,8 @@
     },
     {
       "name": "IBM DB2",
-      "desc": "Database server port: 50000"
+      "desc": "Database server port: 32000",
+      "url": "https://db2.k3s.local/"
     }
   ],
   "system": [
@@ -70,17 +71,7 @@
     {
       "name": "Registry",
       "desc": "Private docker registry",
-      "url": "http://k3s.local:5000/"
-    },
-    {
-      "name": "Verdaccio",
-      "desc": "Private npm server",
-      "url": "http://npm.k3s.local/"
-    },
-    {
-      "name": "Nuget",
-      "desc": "Private nuget server",
-      "url": "http://nuget.k3s.local/"
+      "url": "http://registry.k3s.local/"
     }
   ]
 }
