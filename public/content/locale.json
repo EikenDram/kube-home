@@ -1,5 +1,6 @@
 {
   "app": "Kubernetes cluster",
+  "utils": "Utilities",
   "open": "Open",
   "docs": "Documentation",
   "services": "Services",

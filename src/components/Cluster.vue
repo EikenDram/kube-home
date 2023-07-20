@@ -12,6 +12,16 @@
 
         </v-list>
         <v-divider horizontal></v-divider>
+        <v-list lines="one">
+          <v-list-subheader>{{ locale.utils }}</v-list-subheader>
+
+          <v-list-item v-for="s in cluster.utils">
+            <v-list-item-title><a :href="s.url">{{ s.name }}</a></v-list-item-title>
+            <v-list-item-subtitle>{{ s.desc }}</v-list-item-subtitle>
+          </v-list-item>
+
+        </v-list>
+        <v-divider horizontal></v-divider>
         <v-list lines="three">
           <v-list-subheader>{{ locale.contacts }}</v-list-subheader>
 
@@ -94,6 +104,7 @@ const locale = ref({});
 const apps = ref([]);
 const cluster = ref({
   services: [],
+  utils: [],
   specs: [],
   system: [],
   contacts: []

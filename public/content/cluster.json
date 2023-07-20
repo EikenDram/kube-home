@@ -11,7 +11,7 @@
   "specs": [
     { "name": "IP", "value": "192.168.120.15" },
     { "name": "CPU", "value": "4 Cores" },
-    { "name": "Memory", "value": "5 Gb" },
+    { "name": "Memory", "value": "8 Gb" },
     { "name": "Fedora CoreOS", "value": "37.20230205.3.0" },
     { "name": "K3S", "value": "v1.27.2+k3s1" }
   ],
@@ -35,6 +35,13 @@
       "name": "IBM DB2",
       "desc": "Database server port: 32000",
       "url": "https://db2.k3s.local/"
+    }
+  ],
+  "utils": [
+    {
+      "name": "bulk-pass",
+      "desc": "Update user's passwords from file",
+      "url": "http://git.k3s.local/IT/bulk-pass/"
     }
   ],
   "system": [
