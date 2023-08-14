@@ -2,14 +2,6 @@
 
 Home page for kubernetes cluster
 
-## Push to cluster
-
-Add cluster's gitea as another remote with name `gitea` and run
-
-```
-git push gitea
-```
-
 ## Project setup
 
 ```
