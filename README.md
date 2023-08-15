@@ -1,4 +1,4 @@
-# kube-home
+# KubeHome
 
 Home page for kubernetes cluster
 

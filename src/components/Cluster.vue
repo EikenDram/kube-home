@@ -38,7 +38,8 @@
 
       <v-col>
         <v-responsive class="align-center text-center">
-          <v-img height="300" src="@/assets/logo.svg" />
+          <v-img v-if="logo.url" :height="logo.height" :src="logo.url" />
+          <v-img v-else height="300" src="@/assets/logo.svg" />
 
           <h1 class="text-h2 font-weight-bold">{{ cluster.name }}</h1>
 
@@ -100,6 +101,7 @@
 import { onMounted } from "vue";
 import { ref } from 'vue'
 
+const logo = ref({})
 const locale = ref({});
 const apps = ref([]);
 const cluster = ref({
@@ -111,11 +113,13 @@ const cluster = ref({
 });
 
 onMounted(async () => {
-  const res = await fetch("/content/locale.json")
-  locale.value = await res.json();
-  const res1 = await fetch("/content/apps.json");
-  apps.value = await res1.json();
-  const res2 = await fetch("/content/cluster.json")
-  cluster.value = await res2.json();
+  const resLogo = await fetch("/content/logo.json")
+  logo.value = await resLogo.json();
+  const resLocale = await fetch("/content/locale.json")
+  locale.value = await resLocale.json();
+  const resApps = await fetch("/content/apps.json");
+  apps.value = await resApps.json();
+  const resCluster = await fetch("/content/cluster.json")
+  cluster.value = await resCluster.json();
 });
 </script>
