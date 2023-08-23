@@ -1,6 +1,8 @@
 # KubeHome
 
-Home page for kubernetes cluster
+A simple vue + vuetify home page for a kubernetes cluster for [KubeBuild](https://github.com/EikenDram/kube-build) project, written on vue+vuetify
+
+![site example](docs/site.png)
 
 ## Project setup
 
