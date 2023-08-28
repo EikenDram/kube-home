@@ -3,7 +3,8 @@
     "name": "Application 1",
     "desc": "Description",
     "url": "app1.k3s.local",
-    "docs": "app1.k3s.local/docs"
+    "docs": "app1.k3s.local/docs",
+    "image": { "src": "img/app.jpeg" }
   },
   {
     "name": "Application 2",

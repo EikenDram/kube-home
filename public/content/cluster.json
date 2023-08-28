@@ -5,7 +5,8 @@
       "title": "Administrator",
       "name": "Aiken Drum",
       "phone": "77-77",
-      "mail": "eikendram@gmail.com"
+      "mail": "eikendram@gmail.com",
+      "avatar": { "image": "img/jeb.jpeg" }
     }
   ],
   "specs": [
@@ -17,68 +18,104 @@
   ],
   "services": [
     {
+      "name": "Keycloak",
+      "desc": "Access management",
+      "url": "http://keycloak.k3s.local/",
+      "icon": "fa-solid fa-user-gear"
+    },
+    {
+      "name": "RStudio",
+      "desc": "RStudio server",
+      "url": "http://rocker.k3s.local/",
+      "icon": "fa-solid fa-registered"
+    },
+    {
       "name": "KubeR",
       "desc": "Report processing service",
-      "url": "http://report.k3s.local/"
+      "url": "http://report.k3s.local/",
+      "icon": "fa-r"
     },
     {
       "name": "Rabbit MQ",
       "desc": "Report processing service",
-      "url": "http://rabbitmq.k3s.local/"
+      "url": "http://rabbitmq.k3s.local/",
+      "icon": "fa-solid fa-message"
     },
     {
       "name": "Gitea",
       "desc": "Git server",
-      "url": "http://git.k3s.local/"
+      "url": "http://git.k3s.local/",
+      "icon": "fa-brands fa-git"
     },
     {
       "name": "IBM DB2",
       "desc": "Database server port: 32000",
-      "url": "https://db2.k3s.local/"
+      "url": "https://db2.k3s.local/",
+      "icon": "fa-solid fa-database"
     }
   ],
   "utils": [
     {
-      "name": "bulk-pass",
-      "desc": "Update user's passwords from file",
-      "url": "http://git.k3s.local/IT/bulk-pass/"
+      "name": "keycloak",
+      "desc": "Manage Keycloak users",
+      "url": "http://git.k3s.local/kube-utils/keycloak/",
+      "icon": "fa-solid fa-terminal"
     }
   ],
   "system": [
     {
+      "name": "Dashboard",
+      "desc": "Kubernetes dashboard",
+      "url": "http://dashboard.k3s.local/",
+      "icon": "fa-solid fa-chalkboard"
+    },
+    {
       "name": "Portainer",
       "desc": "Kubernetes management",
-      "url": "http://portainer.k3s.local/"
+      "url": "http://portainer.k3s.local/",
+      "icon": "fa-solid fa-gauge"
     },
     {
       "name": "Grafana",
       "desc": "Monitoring UI",
-      "url": "http://grafana.k3s.local/"
+      "url": "http://grafana.k3s.local/",
+      "icon": "fa-solid fa-chart-line"
     },
     {
       "name": "Argo CD",
       "desc": "Continuous delivery software",
-      "url": "http://argocd.k3s.local/"
+      "url": "http://argocd.k3s.local/",
+      "icon": "fa-solid fa-truck-fast"
     },
     {
       "name": "Tekton",
       "desc": "CI/CD Pipelines",
-      "url": "http://tekton.k3s.local/"
+      "url": "http://tekton.k3s.local/",
+      "icon": "fa-solid fa-diagram-project"
     },
     {
       "name": "MinIO",
       "desc": "Backup storage",
-      "url": "http://k3s.local:9001/"
+      "url": "http://k3s.local:9001/",
+      "icon": "fa-solid fa-hard-drive"
     },
     {
       "name": "Prometheus",
       "desc": "Monitoring aggregator",
-      "url": "http://prometheus.k3s.local/"
+      "url": "http://prometheus.k3s.local/",
+      "icon": "fa-solid fa-chart-bar"
     },
     {
       "name": "Registry",
       "desc": "Private docker registry",
-      "url": "http://registry.k3s.local/"
+      "url": "http://registry.k3s.local/",
+      "icon": "fa-solid fa-box"
+    },
+    {
+      "name": "Traefik",
+      "desc": "Traefik dashboard",
+      "url": "http://traefik.k3s.local/",
+      "icon": "fa-solid fa-network-wired"
     }
   ]
 }

@@ -1,7 +1,7 @@
 <template>
   <v-app-bar flat>
     <v-app-bar-title>
-      <v-icon icon="mdi-cloud" />
+      <v-icon class="ml-2 mr-2" icon="fa-solid fa-cubes" />
 
       {{ locale.app }}
     </v-app-bar-title>
