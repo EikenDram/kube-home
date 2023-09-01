@@ -128,29 +128,6 @@
   </v-container>
 </template>
 
-<script setup>
-import { onMounted } from "vue";
-import { ref } from 'vue'
-
-const logo = ref({})
-const locale = ref({});
-const apps = ref([]);
-const cluster = ref({
-  services: [],
-  utils: [],
-  specs: [],
-  system: [],
-  contacts: []
-});
-
-onMounted(async () => {
-  const resLogo = await fetch("/content/logo.json")
-  logo.value = await resLogo.json();
-  const resLocale = await fetch("/content/locale.json")
-  locale.value = await resLocale.json();
-  const resApps = await fetch("/content/apps.json");
-  apps.value = await resApps.json();
-  const resCluster = await fetch("/content/cluster.json")
-  cluster.value = await resCluster.json();
-});
+<script lang="ts" setup>
+  //
 </script>

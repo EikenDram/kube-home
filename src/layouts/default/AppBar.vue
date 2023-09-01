@@ -1,21 +1,13 @@
 <template>
   <v-app-bar flat>
     <v-app-bar-title>
-      <v-icon class="ml-2 mr-2" icon="fa-solid fa-cubes" />
+      <v-icon icon="mdi-circle-slice-4" />
 
-      {{ locale.app }}
+      Base Preset
     </v-app-bar-title>
   </v-app-bar>
 </template>
 
-<script setup>
-import { onMounted } from "vue";
-import { ref } from 'vue'
-
-const locale = ref({});
-
-onMounted(async () => {
-  const res = await fetch("/content/locale.json")
-  locale.value = await res.json();
-});
+<script lang="ts" setup>
+  //
 </script>
