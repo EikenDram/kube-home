@@ -13,8 +13,18 @@ import { createApp } from 'vue'
 // Plugins
 import { registerPlugins } from '@/plugins'
 
-const app = createApp(App)
+// Configuration
+import {loadRuntimeConfiguration, runtimeConfiguration} from "@/plugins/runtimeConfiguration";
 
-registerPlugins(app)
 
-app.mount('#app')
+
+loadRuntimeConfiguration()
+    .then((runtimeConfigurationOptions) => {
+        const app = createApp(App)
+
+        app.use(runtimeConfiguration, runtimeConfigurationOptions)
+
+        registerPlugins(app)
+
+        app.mount('#app')
+    });
