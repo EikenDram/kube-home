@@ -10,105 +10,78 @@ Helm chart is available from [https://eikendram.github.io/kube-charts](https://g
 
 ## Configuration
 
-Application reads content of `.json` files in `content` directory:
+### config.json
 
-### apps.json
-
-Array of applications:
-
-```json
-[
-  {
-    "name": "Application name",
-    "desc": "Application description",
-    "url": "Application link",
-    "docs": "Documentation link",
-    "image": {
-      "height": "Height of image, 250 is default",
-      "src": "Image source"
-    }
-  }
-]
-```
-
-### cluster.json
-
-Home page configuration:
+Application reads content of `config.json` file in home directory:
 
 ```json
 {
-  "name": "Name of cluster",
-  "contacts": [
+  "apps": [
     {
-      "title": "Contact title",
-      "name": "Contact name",
-      "phone": "Contact phone",
-      "mail": "Contact email",
-      "avatar": {
-        "image": "Avatar image source"
+      "name": "Application name",
+      "desc": "Application description",
+      "url": "Application link",
+      "docs": "Documentation link",
+      "image": {
+        "height": "Height of image, 250 is default",
+        "src": "Image source"
       }
     }
   ],
-  "specs": [
-    {
-      "name": "Specification name",
-      "value": "Specification value"
-    }
-  ],
-  "services": [
-    {
-      "name": "Service name",
-      "desc": "Service description",
-      "url": "Service url",
-      "icon": "Service icon"
-    }
-  ],
-  "utils": [
-    {
-      "name": "Utilities name",
-      "desc": "Utilities description",
-      "url": "Utilities url",
-      "icon": "Utilities icon"
-    }
-  ],
-  "system": [
-    {
-      "name": "System name",
-      "desc": "System description",
-      "url": "System url",
-      "icon": "System icon"
-    }
-  ]
+  "cluster": {
+    "name": "Name of cluster",
+    "logo": {
+      "url": "Logo url",
+      "height": "Logo height"
+    },
+    "contacts": [
+      {
+        "title": "Contact title",
+        "name": "Contact name",
+        "phone": "Contact phone",
+        "mail": "Contact email",
+        "avatar": {
+          "image": "Avatar image source"
+        }
+      }
+    ],
+    "specs": [
+      {
+        "name": "Specification name",
+        "value": "Specification value"
+      }
+    ],
+    "services": [
+      {
+        "name": "Service name",
+        "desc": "Service description",
+        "url": "Service url",
+        "icon": "Service icon"
+      }
+    ],
+    "utils": [
+      {
+        "name": "Utilities name",
+        "desc": "Utilities description",
+        "url": "Utilities url",
+        "icon": "Utilities icon"
+      }
+    ],
+    "system": [
+      {
+        "name": "System name",
+        "desc": "System description",
+        "url": "System url",
+        "icon": "System icon"
+      }
+    ]
+  }
 }
 ```
 
-### locale.json
+### Localization
 
-Localization configuration:
-
-```json
-{
-  "app": "Application bar name",
-  "utils": "Utilities",
-  "open": "Open",
-  "docs": "Documentation",
-  "services": "Services",
-  "contacts": "Contacts",
-  "system": "System",
-  "specs": "Specifications"
-}
-```
-
-### logo.json
-
-Logo configuration
-
-```json
-{
-  "url": "Logo url",
-  "height": "Logo height"
-}
-```
+Locale reads from `VITE_LOCALE` environmental variable
 
 ## Project setup
 
