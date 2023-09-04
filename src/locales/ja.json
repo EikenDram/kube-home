@@ -1,3 +1,10 @@
 {
-    "test": "Test"
+    "cluster": "クラスタ",
+    "services": "サービス",
+    "utils": "ツール",
+    "contacts": "連絡先",
+    "open": "開く",
+    "docs": "ドキュメンテーション",
+    "system": "システム",
+    "specs": "仕様"
 }

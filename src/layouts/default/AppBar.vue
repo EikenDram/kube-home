@@ -1,9 +1,9 @@
 <template>
   <v-app-bar flat>
     <v-app-bar-title>
-      <v-icon icon="mdi-circle-slice-4" />
+      <v-icon class="ml-2 mr-2" icon="fa-solid fa-cubes" />
 
-      Base Preset
+      {{ $t('cluster') }}
     </v-app-bar-title>
   </v-app-bar>
 </template>

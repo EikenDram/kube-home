@@ -1,3 +1,5 @@
+// localization
+
 import { createI18n } from 'vue-i18n'
 
 import en from '../locales/en.json'
@@ -8,11 +10,10 @@ import ru from '../locales/ru.json'
 type MessageSchema = typeof en
 
 export default createI18n<[MessageSchema], 'en' | 'ja' | 'ru' >({
-  locale: 'en',
+  locale: import.meta.env.VITE_LOCALE,
   messages: {
       'en': en,
       'ja': ja,
       'ru': ru
   }
 })
-

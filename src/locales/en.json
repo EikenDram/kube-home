@@ -1,3 +1,10 @@
 {
-  "test": "Test"
+  "cluster": "Cluster",
+  "services": "Services",
+  "utils": "Utilities",
+  "contacts": "Contacts",
+  "open": "Open",
+  "docs": "Documentation",
+  "system": "System",
+  "specs": "Specifications"
 }
