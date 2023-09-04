@@ -81,7 +81,7 @@ Application reads content of `config.json` file in home directory:
 
 ### Localization
 
-Locale reads from `VITE_LOCALE` environmental variable
+Locale value reads from `VITE_LOCALE` environmental variable
 
 ## Project setup
 
