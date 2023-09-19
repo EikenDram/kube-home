@@ -13,5 +13,6 @@ LABEL org.opencontainers.image.description="Home page for kubernetes cluster"
 LABEL org.opencontainers.image.licenses=MIT
 ENV VITE_LOCALE=en
 COPY  --from=build-stage /app/dist /usr/share/nginx/html
+COPY ./.nginx/default.conf /etc/nginx/nginx.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
