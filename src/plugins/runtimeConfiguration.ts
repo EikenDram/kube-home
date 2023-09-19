@@ -4,6 +4,9 @@ import type { App, Plugin } from 'vue';
 
 // runtime configuration
 export interface RuntimeConfiguration {
+    // application locale
+    locale: string
+
     // list of applications
     apps: AppConfiguration[]
 

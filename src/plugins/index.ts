@@ -5,20 +5,20 @@
  */
 
 // Plugins
-import { loadFonts } from './webfontloader'
-import vuetify from './vuetify'
-import i18n from './i18n'
-import router from '../router'
-
+import { loadFonts } from "./webfontloader";
+import vuetify from "./vuetify";
+import i18n from "./i18n";
+import router from "../router";
 
 // Types
-import type { App } from 'vue'
+import type { App } from "vue";
+import { RuntimeConfigurationOptions } from "./runtimeConfiguration";
 
-export function registerPlugins(app: App) {
-  loadFonts()
-  
+export function registerPlugins(app: App, runtimeConfigurationOptions: RuntimeConfigurationOptions) {
+  loadFonts();
+
   app
-    .use(i18n)
+    .use(i18n(runtimeConfigurationOptions))
     .use(vuetify)
-    .use(router)
+    .use(router);
 }
