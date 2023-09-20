@@ -126,7 +126,7 @@
       </v-container>
     </v-row>
 
-    <v-navigation-drawer v-show="props.admin" location="right" :width="340">
+    <v-navigation-drawer v-if="props.admin" location="right" :width="340">
       <v-list lines="one" v-show="props.admin && cluster.system">
         <v-list-subheader>{{ $t("system") }}</v-list-subheader>
 
