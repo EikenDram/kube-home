@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-navigation-drawer :width="340">
+    <v-navigation-drawer :width="340" permanent>
       <v-list lines="one" v-show="props.admin && cluster.services">
         <v-list-subheader>{{ $t("services") }}</v-list-subheader>
 
@@ -126,7 +126,12 @@
       </v-container>
     </v-row>
 
-    <v-navigation-drawer v-if="props.admin" location="right" :width="340">
+    <v-navigation-drawer
+      v-if="props.admin"
+      location="right"
+      permanent
+      :width="340"
+    >
       <v-list lines="one" v-show="props.admin && cluster.system">
         <v-list-subheader>{{ $t("system") }}</v-list-subheader>
 
